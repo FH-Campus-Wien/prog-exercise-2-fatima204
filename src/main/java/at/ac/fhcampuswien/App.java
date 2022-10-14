@@ -5,46 +5,25 @@ import java.util.Scanner;
 public class App {
 
     //todo Task 1
-    public void largestNumber(){
+    public void largestNumber() {
         // input your solution here
 
+        double number;
+        int counter = 1;
+        double largest = 0;
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Number 1: ");
-        double n1 = scanner.nextDouble();
-
-        System.out.println("Number 2: ");
-        double n2 = scanner.nextDouble();
-
-        System.out.println("Number 3: ");
-        double n3 = scanner.nextDouble();
-
-        System.out.println("Number 4: ");
-        double n4 = scanner.nextDouble();
-
-        System.out.println("Number 5: ");
-        double n5 = scanner.nextDouble();
-
-        double [] number = new double[5];
-        number [0]=n1;
-        number [1]=n2;
-        number [2]=n3;
-        number [3]=n4;
-        number [4]=n5;
-
-        if (number.length > 0) {
-            if (n1>n2 && n1>n3 && n1>n4 && n1>n5) {
-                System.out.println("The largest number is: "+n1);
-            } else if (n2>n1 && n2>n3 && n2>n4 && n2>n5){
-                System.out.println("The largest number is: "+n2);
-            }else if (n3>n1 && n3>n2 && n3>n4 && n3>n5){
-                System.out.println("The largest number is: "+n3);
-            }else if (n4>n1 && n4>n2 && n4>n3 && n4>n5){
-                System.out.println("The largest number is: "+n4);
-            }else if (n5>n1 && n5>n2 && n5>n3 && n5>n4){
-                System.out.println("The largest number is: "+n5);
+        System.out.println("Number" + (counter + 1) + ":");
+        number = scanner.nextDouble();
+        while(1<number) {
+            if (number < 0) {
+                System.out.println("No number entered.");
+                return;
+            } else if (number > largest) {
+                largest = number;
             }
-        } System.out.println("No number entered");
+        }System.out.println("The largest number is" +(largest));
+        counter++;
+
 
     }
 
@@ -130,9 +109,8 @@ public class App {
 
         Scanner scanner = new Scanner (System.in);
 
-        int i=1;
-        System.out.println("Mark"+ i++);
-        System.out.print(":");
+        int counter=0;
+        System.out.println("Mark"+ (counter+1) + ":");
 
         int number = scanner.nextInt();
 
